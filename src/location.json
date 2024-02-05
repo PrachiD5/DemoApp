@@ -1,0 +1,33 @@
+{
+    "locations": [
+      {"id": 1, "name": "Mumbai"},
+      {"id": 2, "name": "Pune"},
+      {"id": 3, "name": "Bangalore"},
+      {"id": 4, "name": "Hyderabad"},
+      {"id": 5, "name": "Navi Mumbai"},
+      {"id": 6, "name": "Thane"},
+      {"id": 7, "name": "Delhi"},
+      {"id": 8, "name": "Ahmedabad"}
+    ],
+
+    "state":[
+      {"id": 1, "name": "Maharashtra"},
+      {"id": 2, "name": "Uttar Pradesh"},
+      {"id": 3, "name": "Karnataka"},
+      {"id": 4, "name": "Goa"},
+      {"id": 5, "name": "Andhra Pradesh"},
+      {"id": 6, "name": "Bihar"},
+      {"id": 7, "name": "Gujrat"},
+      {"id": 8, "name": "Assam"}
+    ],
+
+    "country":[
+      {"id": 1, "name": "India"},
+      {"id": 2, "name": "UK"},
+      {"id": 3, "name": "USA"},
+      {"id": 4, "name": "Mauritius"},
+      {"id": 5, "name": "Shri Lanka"},
+      {"id": 6, "name": "UAE"}
+    ]
+  }
+  

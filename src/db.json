@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "image":[],
+      "fname": "Rohan",
+      "lname": "Thakur",
+      "email": "rohan2#gmail.com",
+      "contact": "5874569354",
+      "age": [],
+      "state": "Maharashtra",
+      "country": "India",
+      "address": {
+        "home": {
+          "home1": "dombivali(west)",
+          "home2": "thane(east)"
+        },
+        "company": {
+          "company1": "kurla",
+          "company2": "powai"
+        }
+      },
+      "id": "0520"
+    },
+    {
+      "id": "2492",
+      "fname": "",
+      "lname": "",
+      "email": "",
+      "contact": "",
+      "age": "",
+      "state": "",
+      "country": "",
+      "address": ""
+    }
+  ]
+}

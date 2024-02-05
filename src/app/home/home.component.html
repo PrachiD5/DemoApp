@@ -1,0 +1,78 @@
+<!-- ng add @fortawesome/angular-fontawesome = installation link-->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+<div class="header">
+<!-- Navbar ------------------------------------------------------------------------------------------------------------->
+  <nav>
+    <div class="left">
+      <h2>Demo App</h2>
+    </div>
+    <div class="right">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#job">Jobs</a>
+        <a href="#client">Clients</a>
+        <a href="#employer">Employers</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+  </nav>
+<!-- Content ------------------------------------------------------------------------------------------------------------>
+  <div class="content">
+
+    <h1>I'm looking for...</h1>
+    <input type="text" placeholder="Enter a Job Description" class="border border-gradient-gray bottom">
+    <button class="border-gradient border-gradient-blue only-bottom"><fa-icon [icon]="faSearch"></fa-icon>Search</button>
+
+    <section class="ho-page">
+        <div class="checkbox">
+          <input type="checkbox" id="terms" class="checkbox">
+          <label>Full Time</label>
+          <input type="checkbox" id="terms" class="checkbox">
+          <label>Part Time / Casual / Freelance</label>
+        </div>
+
+      <div class="select">
+        <select id="location">
+          <option value="" disabled selected>Select your Location</option>
+          <option *ngFor="let location of locations" [value]="location">{{ location.name }}</option>
+        </select>
+      </div>
+      
+    </section>
+
+    <div class="btn text-center" style="margin-left: 45%;">
+      <button class="border-gradient border-gradient-blue only-bottom" (click)="openRegForm()">Register</button>
+    </div> 
+  </div>
+</div>
+  <!-- section 2 --------------------------------------------------------------------------------------------------------->
+
+
+
+<section class="home border-gradient border-gradient-mix only-top">
+  <h4>We're leaders in</h4>
+  <h1>Creative Digital Recruitment</h1>
+  <p>Based in Surry Hills, the creative hub of Sydney we are surrounded by creativity and that reflects 
+    on the type of jobs we recruit for.</p>
+  <button type="submit">find out more about us!</button>
+</section>
+
+<section class="subscribe border-gradient border-gradient-mix only-top">
+  <div>
+<p style="font-weight:400; font-size: 1rem;">Subscribe to our job Seeker Mailing List</p>
+<input type="email" placeholder="Enter Your Email Address" class="inputt"><fa-icon [icon]="faEnvelope"></fa-icon>
+  </div>
+</section>
+
+<section class="footer border-gradient border-gradient-mix only-top">
+<fa-icon [icon]="faenvelope"></fa-icon><input type="email" class="inputt">
+<div class="display">
+  <div>Copyright &copy; 2014 Two Bytes Consulting. <span>Terms & Policies.</span></div>
+  <div class="btnn">
+    <button class="twit"><fa-icon [icon]="faTwitter" style="color: rgb(2, 128, 170);"></fa-icon>Tweet</button>
+    <button class="face"><fa-icon [icon]="faFacebook" style="color: blue;"></fa-icon>Like</button>
+  </div>
+</div>
+</section>

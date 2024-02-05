@@ -1,0 +1,103 @@
+<form [formGroup]="addData" (ngSubmit)="onAdd()">
+  <div class="reg">
+    <h4>Register</h4><br>
+  </div>
+
+    <label class="image-upload-container btn btn-bwm">
+      <span>Select Image</span>
+      <input #imageInput
+             type="file"
+             accept="image/*"
+             (change)="processFile(imageInput)" formControlName="image" class="form-control" style="display: none;">
+    </label>    
+    
+    <div *ngIf="selectedFile" class="img-preview-container">
+    
+      <div class="img-preview{{selectedFile.status === 'fail' ? '-error' : ''}}"
+           [ngStyle]="{'background-image': 'url('+ selectedFile.src + ')'}">
+      </div>
+    
+      <div *ngIf="selectedFile.pending" class="img-loading-overlay">
+        <div class="img-spinning-circle"></div>
+      </div>
+    
+      <div *ngIf="selectedFile.status === 'ok'" class="alert alert-success"> Image Uploaded Succesfully!</div>
+      <div *ngIf="selectedFile.status === 'fail'" class="alert alert-danger"> Image Upload Failed!</div>
+    </div>
+
+    <div class="row">
+        <div class="col g-3">
+            <input type="text" formControlName="fname" placeholder="First Name" class="form-control">
+            <span class="text-danger" *ngIf="formValues['fname'].invalid && formValues['fname'].touched">please enter valid name*</span><br>        
+        </div>
+        <div class="col">
+            <input type="text" formControlName="lname"  placeholder="Last Name" class="form-control">
+            <span class="text-danger" *ngIf="formValues['lname'].invalid && formValues['lname'].touched">please enter valid name*</span><br>
+        </div>
+    </div>
+    
+    <input type="email" formControlName="email"  placeholder="Email" class="form-control">
+    <span class="text-danger" *ngIf="formValues['email'].invalid && formValues['email'].touched">please enter valid email*</span><br>
+
+    <input type="contact" formControlName="contact"  placeholder="(541)754-3010" class="form-control">
+    <span class="text-danger" *ngIf="formValues['contact'].invalid && formValues['contact'].touched">please enter valid contact no*</span><br>
+
+    <div formControlName="age" class="form-control" style="border: none;" required>
+        <label for="customRange1" class="form-label" style="color: gray; padding-left: 3%; border: none;">Age</label>
+        <input type="range" class="form-range" id="customRange1" style="border: none; padding: 2%;">
+        <span class="text-danger" *ngIf="formValues['age'].invalid && formValues['age'].touched">age is must*</span><br><br>
+    </div>
+
+    <div class="form-select" formControlName="state" class="form-control" required>
+        <select id="location" style="border: none;">
+          <option value="" disabled selected>State</option>
+          <option *ngFor="let states of state" [value]="state">{{ states.name }}</option>
+        </select>
+      </div>
+    <span class="text-danger" *ngIf="formValues['state'].invalid && formValues['state'].touched">option must be selected*</span><br>
+    
+    <div class="form-select" formControlName="country" class="form-control" required>
+        <select id="location" style="border: none;">
+          <option value="" disabled selected>Country</option>
+          <option *ngFor="let countries of country" [value]="country">{{ countries.name }}</option>
+        </select>
+      </div>
+    <span class="text-danger" *ngIf="formValues['country'].invalid && formValues['country'].touched">option must be selected*</span><br>
+
+
+    <div class="form-select" formControlName="address" class="form-control" required>
+      <select id="location" [(ngModel)]="selectedAddressType" style="border: none;">
+         <option value="" disabled selected>Address</option>
+         <option value="home">Home</option>
+         <option value="company">Company</option>
+      </select>
+      <div *ngIf="selectedAddressType === 'home'">
+        <select id="location" [(ngModel)]="selectedAddressType" style="border: none;">
+          <option value="" disabled selected>Home</option>
+          <option value="home1">Home1</option>
+         <option value="home2">Home2</option>
+       </select>
+         <select id="location" formControlName="home1" style="border: none;">
+            <option value="" disabled selected>Select Home Address</option>
+            <option *ngFor="let add of address" [value]="address">{{ add.home.home1 }} && {{ add.home.home2 }}</option>
+         </select>
+      </div>
+      <div *ngIf="selectedAddressType === 'company'">
+         <select id="location" formControlName="company" style="border: none;">
+            <option value="" disabled selected>Select Company Address</option>
+            <option *ngFor="let add of address" [value]="address">
+               {{ add.company.company1 }} && {{ add.company.company2 }}
+            </option>
+         </select>
+      </div>
+   </div>   
+    <span class="text-danger" *ngIf="formValues['address'].invalid && formValues['address'].touched">please enter valid address*</span><br>
+    
+<div class="span">
+<input type="checkbox"><span>Subscribe to Newsletter</span>
+</div>
+    <div class="btn1">
+      <button type="button" style="background: none; color:gray; border:1px solid gray; margin-left:6rem;">Cancel</button>
+      <button type="submit" style="background-color: deepskyblue; color:white; margin-left:0.5rem;" [disabled]="!addData.valid" (click)="onSubmit()">Submit</button>
+    </div>
+</form> 

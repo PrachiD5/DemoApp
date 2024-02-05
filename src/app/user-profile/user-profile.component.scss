@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 7rem;
+    background-color: deepskyblue;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    margin-top: 2rem;
+    font-family: "Inter", sans-serif;
+}
+
+.header .left h2 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+}
+
+.header .right {
+    background: none;
+    margin: auto;
+    //align-items: center;
+    //justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 10px;
+    color: white;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.header .right a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.profile{
+    width: 100%;
+    height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: start;
+    border: 1px solid black;
+}
+
+.profile .upload{
+    width: 400px;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.upload img{
+    margin-left: 1.5rem;
+}
+
+.upload h2{
+    color: deepskyblue;
+    padding-right: 4.7rem;
+}
+
+.upload .btn button{
+    background-color: goldenrod;
+    padding: 0.5rem;
+    color: rgb(76, 74, 74);
+    border: none;
+    border-radius: 5px;
+    margin: 3px;
+    margin-left: 1rem;
+}
+
+.profile .info{
+    width: 600px;
+    text-align: left;
+    padding: 5rem;
+    padding-top: 5.8rem;
+    margin-left: 19.5rem;
+    font-size: 20px;
+}
+
+.info span{
+    color: deepskyblue;
+}
+.info .bttn{
+    background-color: green;
+    padding: 0.5rem;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 5rem;
+    margin-top: 2rem;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subscribe{
+    background-size: cover;
+    margin: 0;
+    width: 100%;
+    height: 280px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 3%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.subscribe input{
+    color: white;
+    border: 2px solid deepskyblue;
+    background: none;
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 1rem;
+    width: 15rem;
+    font-style: italic;
+}
+
+.subscribe fa-icon{
+    z-index: 1;
+    position: relative;
+    right: 22px;
+}
+
+.subscribe .inputt{
+    color: #fff;
+}
+
+.footer{
+    background-color: #dbdbdb;
+    height: 150px;
+    padding-top: 3%;
+    padding-left: 7rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer div{
+    display: flex;
+    //padding-top: 1rem;
+}
+
+.footer .display .btnn{
+    margin-inline-end: 1%;
+    margin-left: 50%;
+}
+
+.footer .display .btnn button{
+    padding: 0.1rem;
+    border-radius: 5px;
+    margin: 1%;
+    width: 5rem;
+    gap: 1;
+}
+
+.footer .display .btnn .face{
+    background-color: rgb(178, 178, 252);
+    border: 2px solid rgb(91, 91, 251);
+    color: blue;
+    font-weight: bold;
+}
+
+.footer .display .btnn .twit{
+    background-color: rgb(161, 224, 245);
+    border: 2px solid rgb(2, 128, 170);
+    color: rgb(2, 128, 170);
+    font-weight: bold;
+}
+
+.footer input{
+    border: none;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+.footer fa-icon{
+    position: relative;
+    right: 0.2rem;
+}
+
+.footer .display div{
+    color: grey;
+}
+
+.footer .display span{
+    color: black;
+    font-weight: bold;
+}
+
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 4px;
+}
+
+.border-gradient-mix {
+    border-image-source: linear-gradient(to left, rgb(95, 94, 94),rgb(2, 66, 87),rgb(127, 222, 254), rgb(2, 66, 87), rgb(5, 171, 226),rgb(95, 94, 94),rgb(127, 222, 254),rgb(2, 66, 87),rgb(109, 131, 138),rgb(127, 222, 254),rgb(2, 66, 87),rgb(5, 171, 226));
+}
+
+.only-top {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
